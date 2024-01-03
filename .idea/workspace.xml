@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dd57ed6-3e10-462c-8e41-7675705eb827" name="Changes" comment="Mejoras de menú y funcionamiento de control de errores">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Colors.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Funcions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Utilities.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="8dd57ed6-3e10-462c-8e41-7675705eb827" name="Changes" comment="Control errores + Import Color" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704199426842</updated>
-      <workItem from="1704230269455" duration="10125000" />
+      <workItem from="1704230269455" duration="10721000" />
     </task>
     <task id="LOCAL-00001" summary="Creación de menú">
       <option name="closed" value="true" />
@@ -122,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704208902140</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Control errores + Import Color">
+      <option name="closed" value="true" />
+      <created>1704240702828</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704240702828</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +131,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Creación de menú" />
     <MESSAGE value="Mejoras de menú y funcionamiento de control de errores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mejoras de menú y funcionamiento de control de errores" />
+    <MESSAGE value="Control errores + Import Color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Control errores + Import Color" />
   </component>
 </project>
