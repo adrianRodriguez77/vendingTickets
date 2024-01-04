@@ -6,7 +6,7 @@ const val errorMSG = "Introduce lo que se te pide, por favor."
 
 fun menuTickets(){
     //Mostrar menú de tickets
-    print(
+    println(
         """
         $YELLOW_BOLD$BLACK_BACKGROUND MENÚ VENDING TICKETS (Metro - Bus - Tren) $RESET
         $YELLOW_BOLD$BLACK_BACKGROUND                                           $RESET
@@ -25,7 +25,7 @@ fun opcMenuTickets(): String{
         //Mostrar els tickets
         menuTickets()
 
-        print("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Selecciona un bitllet:                    $RESET")
+        println("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Selecciona un bitllet:                    $RESET")
 
         //Verificar que l'usuari intredueix un número
         if (scanner.hasNextInt()){
@@ -34,7 +34,7 @@ fun opcMenuTickets(): String{
                 //Entrada de l'usuari
                 opcMenu = scanner.nextInt()
 
-                print("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Continuar (S/n):                          $RESET")
+                println("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Continuar (S/n):                          $RESET")
                 val continuar = scanner.next()
                 val continuarMIN = continuar.lowercase(Locale.getDefault())
 
@@ -58,7 +58,7 @@ fun opcMenuTickets(): String{
                 3 -> tipusBitllet = "TUsual"
                 4 -> tipusBitllet = "TFamiliar"
                 5 -> tipusBitllet = "TJove"
-                else -> println("Introduce una de estas opciones: 1, 2, 3, 4, 5")
+                else -> println("Introdueïx una d'aquestes opcions: 1, 2, 3, 4, 5")
             }
         } else {
             //Control d'errors
@@ -81,7 +81,7 @@ fun opcZones(): Int{
 
     do {
         zonesMenu()
-        print("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Selecciona una zona:                      $RESET")
+        println("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Selecciona una zona:                      $RESET")
 
         // Verificar que l'entrada sigui un número
         if (scanner.hasNextInt()) {
@@ -91,9 +91,9 @@ fun opcZones(): Int{
 
             // Verificar si la opció es vàlida
             when(opcZona){
-                1 -> println("$YELLOW_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has escollit $opcZona zona.                      $RESET")
-                2 -> println("$YELLOW_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has escollit $opcZona zones.                     $RESET")
-                3 -> println("$YELLOW_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has escollit $opcZona zones.                     $RESET")
+                1 -> println("$BLUE_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has escollit $opcZona zona.                      $RESET")
+                2 -> println("$BLUE_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has escollit $opcZona zones.                     $RESET")
+                3 -> println("$BLUE_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has escollit $opcZona zones.                     $RESET")
                 else -> println("$BLUE_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Opcions disponibles: 1, 2, 3              $RESET")
             }
 
@@ -111,16 +111,16 @@ fun quantitatTickets(): Int {
     var sortidaInt: Int
 
     do {
-        print("\n$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Quants bitllets vols comprar?             $RESET")
+        println("\n$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Quants bitllets vols comprar?             $RESET")
 
-        val tickets: String = ""
+        val tickets = ""
 
         sortidaInt = readInt(tickets, errorMSG)
 
         if (sortidaInt > 3) {
-            println("No pots adquirir més de 3 bitllets per persona!")
+            println("$RED_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT No pots adquirir més de 3 bitllets per persona!$RESET")
         } else if (sortidaInt <= 0) {
-            println("Has d'elegir mínim 1 bitllet!!!")
+            println("$RED_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has de seleccionar mínim 1 bitllet!!!     $RESET")
         }
 
     } while (sortidaInt !in ticketList)

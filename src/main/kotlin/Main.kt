@@ -17,8 +17,7 @@ fun main() {
         val preu = preuTickets(bitllet, zona, quantitat)
         /*val preuRedondeado = String.format("%.2f", preu).toDouble()*/
 
-        println("$GREEN_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT $quantitat $bitllet amb zona $zona - Preu: $preu€ - COMPRAT AMB ÈXIT!!! $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT$RESET\n"
-                )
+        println("$GREEN_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT $quantitat $bitllet amb zona $zona - Preu: $preu€ - COMPRAT AMB ÈXIT!!! $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT$RESET\n")
 
         when (bitllet) {
             "Bitllet Senzill" -> asciiBitlletSenzill()
@@ -27,7 +26,7 @@ fun main() {
             "TFamiliar" -> asciiTFamiliar()
             "TJove" -> asciiTJove()
         }
-        //Netejar buffer
+        //Netejar espais
         scanner.nextLine()
 
     }
