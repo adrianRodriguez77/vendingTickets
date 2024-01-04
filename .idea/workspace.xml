@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dd57ed6-3e10-462c-8e41-7675705eb827" name="Changes" comment="Mejora de funcionamiento">
+    <list default="true" id="8dd57ed6-3e10-462c-8e41-7675705eb827" name="Changes" comment="Mejora de menús y código ascii">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Ascis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Ascis.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Funcions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Funcions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -146,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704374071854</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Mejora de menús y código ascii">
+      <option name="closed" value="true" />
+      <created>1704378351674</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704378351674</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +176,7 @@
     <MESSAGE value="Mejoras de menú y funcionamiento de control de errores" />
     <MESSAGE value="Control errores + Import Color" />
     <MESSAGE value="Mejora de funcionamiento" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mejora de funcionamiento" />
+    <MESSAGE value="Mejora de menús y código ascii" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mejora de menús y código ascii" />
   </component>
 </project>

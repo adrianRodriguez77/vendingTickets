@@ -30,7 +30,7 @@ fun opcMenuTickets(): String{
         //Verificar que l'usuari intredueix un número
         if (scanner.hasNextInt()){
 
-
+            do {
                 //Entrada de l'usuari
                 opcMenu = scanner.nextInt()
 
@@ -49,6 +49,8 @@ fun opcMenuTickets(): String{
                         println("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Has d'introduïr 'S' o 'N'$RESET")
                     }
                 }
+
+            }while (continuar != "s")
 
 
             //Verificar l'opció de l'usuari
@@ -171,4 +173,27 @@ fun preuTickets(bitllet: String, zona: Int, quantitat: Int): Double {
 
         else -> {0.0}
     }
+
+}
+fun mostrarTicket(bitllet: String, zona: Int, quantitat: Int, preu: Double) {
+    println("""
+        _____________________________TICKET______________________________    
+        $quantitat $bitllet amb zona $zona                              $preu€    
+        _________________________________________________________________
+    """.trimIndent())
+}
+
+fun mostrarTicketTotal(detallCompra: List<String>, totalPreu: Double) {
+    println("""
+        _____________________________TICKET TOTAL______________________________    
+    """.trimIndent())
+
+    for ((index, detall) in detallCompra.withIndex()) {
+        println(detall)
+    }
+
+    println("""
+        _______________________________________________________________________
+        Total Preu:                                               $totalPreu€
+    """.trimIndent())
 }
