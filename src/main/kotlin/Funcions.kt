@@ -197,3 +197,54 @@ fun mostrarTicketTotal(detallCompra: List<String>, totalPreu: Double) {
         Total Preu:                                               $totalPreu€
     """.trimIndent())
 }
+
+fun demanarTickets(): Triple<String, Int, Int> {
+    val bitllet = opcMenuTickets()
+    val zona = opcZones()
+    val quantitat = quantitatTickets()
+
+    return Triple(bitllet, zona, quantitat)
+}
+
+fun gestionarPagament(totalPreu: Double) {
+    var dinersIntroduits = 0.0
+
+    while (dinersIntroduits < totalPreu) {
+        print("Introdueix diners (només monedes i bitllets d'EURO): ")
+
+        if (scanner.hasNextDouble()) {
+            val moneda = scanner.nextDouble()
+
+            when {
+                moneda in setOf(0.05, 0.10, 0.20, 0.50, 1.0, 2.0, 5.0, 10.0, 20.0, 50.0) -> {
+                    dinersIntroduits += moneda
+                    println("Diners introduïts: $dinersIntroduits€")
+                }
+                else -> {
+                    mostrarMonedaNoValida()
+                }
+            }
+
+            if (dinersIntroduits >= totalPreu) {
+                val canvi = dinersIntroduits - totalPreu
+                mostrarCompraSatisfactoria(canvi)
+            }
+        } else {
+            mostrarEntradaNoValida()
+        }
+    }
+}
+
+fun mostrarCompraSatisfactoria(canvi: Double) {
+    println("Compra satisfactòria. Torna: $canvi€")
+}
+
+fun mostrarMonedaNoValida() {
+    println("Moneda no vàlida. Introdueix una quantitat vàlida.")
+    scanner.nextLine() // Netegem el buffer del scanner
+}
+
+fun mostrarEntradaNoValida() {
+    println("Entrada no vàlida. Introdueix un nombre vàlid.")
+    scanner.nextLine() // Netegem el buffer del scanner
+}
