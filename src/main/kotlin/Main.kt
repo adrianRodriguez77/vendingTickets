@@ -8,10 +8,29 @@ fun main() {
 
     while (true){
         val bitllet = opcMenuTickets()
+
         val zona = opcZones()
-        print("\nQuants bitllets vols comprar? ")
+
         val quantitat = quantitatTickets()
-        println("$bitllet amb zona $zona té un preu de ${preuTickets(bitllet, zona, quantitat)}€\n")
+
+        // Juntamos precio final en una variable y redondeamos a formato 2 decimales (euros)
+        val preu = preuTickets(bitllet, zona, quantitat)
+        val preuRedondeado = String.format("%.2f", preu).toDouble()
+
+        println(GREEN_BACKGROUND_BRIGHT + WHITE_BOLD_BRIGHT +
+                "$quantitat $bitllet amb zona $zona - Preu: $preuRedondeado€ - COMPRAT AMB ÈXIT!!! \n"
+                + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT)
+
+        when (bitllet) {
+            "Bitllet Senzill" -> asciiBitlletSenzill()
+            "TCasual" -> asciiTCasual()
+            "TUsual" -> asciiTUsual()
+            "TFamiliar" -> asciiTFamiliar()
+            "TJove" -> asciiTJove()
+        }
+        //Netejar buffer
+        scanner.nextLine()
+
     }
 
 }

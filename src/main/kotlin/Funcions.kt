@@ -30,7 +30,7 @@ fun opcMenuTickets(): String{
         //Verificar que l'usuari intredueix un número
         if (scanner.hasNextInt()){
 
-            do {
+
                 //Entrada de l'usuari
                 opcMenu = scanner.nextInt()
 
@@ -49,7 +49,7 @@ fun opcMenuTickets(): String{
                         println("Debes introducir 'S' o 'N'")
                     }
                 }
-            }while (continuarMIN != "s")
+
 
             //Verificar l'opció de l'usuari
             when(opcMenu){
@@ -97,6 +97,7 @@ fun opcZones(): Int{
                 3 -> println("Has escollit $opcZona zones.")
                 else -> println("Opcions disponibles: 1, 2, 3")
             }
+
         } else {
             println("Error! Has de seleccionar una zona. Intenta-ho una altre vegada!.")
             // Netejar el buffer del Scanner
@@ -105,17 +106,26 @@ fun opcZones(): Int{
     } while (opcZona !in 1..3)
     return opcZona
 }
-fun quantitatTickets(): Int{
-    var tickets: Int
+fun quantitatTickets(): Int {
+
+    val ticketList = mutableListOf(1, 2, 3)
+    var sortidaInt: Int
+
     do {
-        tickets = scanner.nextInt()
-        if (tickets > 3){
+        println("\nQuants bitllets vols comprar? ")
+
+        val tickets: String = ""
+
+        sortidaInt = readInt(tickets, errorMSG)
+
+        if (sortidaInt > 3) {
             println("No pots adquirir més de 3 bitllets per persona!")
-        } else if (tickets < 0){
-            println("Selecciona una opció corrceta!")
+        } else if (sortidaInt <= 0) {
+            println("Has d'elegir mínim 1 bitllet!!!")
         }
-    } while (tickets !in 1..3)
-    return tickets
+
+    } while (sortidaInt !in ticketList)
+    return sortidaInt
 }
 fun preuTickets(bitllet: String, zona: Int, quantitat: Int): Double {
     return when(bitllet){

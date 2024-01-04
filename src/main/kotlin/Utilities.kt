@@ -173,11 +173,11 @@ fun readInt(pMessageIn: String
     var correctDataType: Boolean = false
 
     do{
-        println(pMessageIn)
+
         correctDataType = scan.hasNextInt()
 
         if (!correctDataType){
-            println(RED_BACKGROUND_BRIGHT + "ERROR: " + pMessageErrorDT + RESET)
+            println(RED_BACKGROUND_BRIGHT + "ERROR: " + pMessageErrorDT + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT)
         }else{
             outputValue = scan.nextInt()
         }
