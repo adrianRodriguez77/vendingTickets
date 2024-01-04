@@ -1,13 +1,14 @@
 package org.example
 
 fun asciiBitlletSenzill() {
-    println(CYAN_BACKGROUND_BRIGHT + WHITE_BOLD_BRIGHT + " ____        _____ ______ _   _ ___________ _      _      \n" +
-            "|  _ \\      / ____|  ____| \\ | |___  /_   _| |    | |     \n" +
-            "| |_) |____| (___ | |__  |  \\| |  / /  | | | |    | |     \n" +
-            "|  _ <______\\___ \\|  __| | . ` | / /   | | | |    | |     \n" +
-            "| |_) |     ____) | |____| |\\  |/ /__ _| |_| |____| |____ \n" +
-            "|____/     |_____/|______|_| \\_/_____|_____|______|______| \n" +
-            "                                                 \n" + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT)
+    println("""
+            $CYAN_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT  ____        _____ ______ _    _ ______ ____ _      _       $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT$RESET
+            $CYAN_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT |  _ \      / ____|  ____| \  | |___  /_   _| |    | |      $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT$RESET
+            $CYAN_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT | |_) |____| (___ | |__  |  \_| |  / /  | | | |    | |      $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT$RESET
+            $CYAN_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT |  _ <______\ ___ \ |  __| |    | / /   | | | |    | |      $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT$RESET
+            $CYAN_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT | |_) |     ____) | |____| | \  |/ /__ _| |_| |____| |____  $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT$RESET
+            $CYAN_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT |____/     |_____/|______|_|  \_/_____|_____|______|______| $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT$RESET
+    """.trimIndent())
 }
 
 
@@ -20,7 +21,7 @@ fun asciiTCasual() {
                 "   | |______| |      / /\\ \\  \\___ \\| |  | |/ /\\ \\ | |     \n" +
                 "   | |      | |____ / ____ \\ ____) | |__| / ____ \\| |____ \n" +
                 "   |_|       \\_____/_/    \\_\\_____/ \\____/_/    \\_\\______|\n" +
-                "                                                          \n" + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT)
+                "                                                          \n" + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT+ RESET)
 
 }
 
@@ -31,7 +32,7 @@ fun asciiTUsual() {
             "   | |______| |  | |\\___ \\| |  | |/ /\\ \\ | |     \n" +
             "   | |      | |__| |____) | |__| / ____ \\| |____ \n" +
             "   |_|       \\____/|_____/ \\____/_/    \\_\\______|\n" +
-            "                                                 \n" + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT)
+            "                                                 \n" + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT+ RESET)
 }
 
 fun asciiTFamiliar() {
@@ -41,7 +42,7 @@ fun asciiTFamiliar() {
             "   | |______|  __/ /\\ \\ | |\\/| | | | | |      | |   / /\\ \\ |  _  / \n" +
             "   | |      | | / ____ \\| |  | |_| |_| |____ _| |_ / ____ \\| | \\ \\ \n" +
             "   |_|      |_|/_/    \\_\\_|  |_|_____|______|_____/_/    \\_\\_|  \\_\\ \n" +
-            "                                                 \n" + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT)
+            "                                                 \n" + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT+ RESET)
 }
 
 fun asciiTJove() {
@@ -51,5 +52,5 @@ fun asciiTJove() {
             "   | |______|   | | |  | |\\ \\/ / |  __|  \n" +
             "   | |     | |__| | |__| | \\  /  | |____ \n" +
             "   |_|      \\____/ \\____/   \\/   |______|\n" +
-            "                                         \n" + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT)
+            "                                         \n" + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT+ RESET)
 }

@@ -6,17 +6,17 @@ const val errorMSG = "Introduce lo que se te pide, por favor."
 
 fun menuTickets(){
     //Mostrar menú de tickets
-    println(
-        YELLOW_BOLD + BLACK_BACKGROUND + """
-        MENÚ VENDING TICKETS (Metro - Bus - Tren)
+    print(
+        """
+        $YELLOW_BOLD$BLACK_BACKGROUND MENÚ VENDING TICKETS (Metro - Bus - Tren) $RESET
+        $YELLOW_BOLD$BLACK_BACKGROUND                                           $RESET
+        $YELLOW_BOLD$BLACK_BACKGROUND 1. Bitllet senzill                        $RESET
+        $YELLOW_BOLD$BLACK_BACKGROUND 2. TCasual                                $RESET
+        $YELLOW_BOLD$BLACK_BACKGROUND 3. TUsual                                 $RESET
+        $YELLOW_BOLD$BLACK_BACKGROUND 4. TFamiliar                              $RESET
+        $YELLOW_BOLD$BLACK_BACKGROUND 5. TJove                                  $RESET
         
-        1. Bitllet senzill
-        2. TCasual
-        3. TUsual
-        4. TFamiliar
-        5. TJove
-        
-    """.trimIndent() + WHITE_BACKGROUND_BRIGHT + BLUE_BOLD_BRIGHT)
+    """.trimIndent())
 }
 fun opcMenuTickets(): String{
     var opcMenu = 0
@@ -25,7 +25,7 @@ fun opcMenuTickets(): String{
         //Mostrar els tickets
         menuTickets()
 
-        println("Selecciona un bitllet: ")
+        print("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Selecciona un bitllet:                    $RESET")
 
         //Verificar que l'usuari intredueix un número
         if (scanner.hasNextInt()){
@@ -34,19 +34,19 @@ fun opcMenuTickets(): String{
                 //Entrada de l'usuari
                 opcMenu = scanner.nextInt()
 
-                println("Continuar (S/n)")
+                print("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Continuar (S/n):                          $RESET")
                 val continuar = scanner.next()
                 val continuarMIN = continuar.lowercase(Locale.getDefault())
 
                 when (continuarMIN) {
                     "n" -> {
-                        println("Torna a seleccionar el bitllet: (1, 2, 3, 4, 5)")
+                        println("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Torna a seleccionar el bitllet: $RESET")
                     }
                     "s" -> {
-                        println("Segueix amb la compra")
+                        println("$GREEN_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Segueix amb la compra!                    $RESET")
                     }
                     else -> {
-                        println("Debes introducir 'S' o 'N'")
+                        println("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Has d'introduïr 'S' o 'N'$RESET")
                     }
                 }
 
@@ -71,9 +71,8 @@ fun opcMenuTickets(): String{
 }
 fun zonesMenu(){
     println("""
-        
-            Zones de distància que vol viatjar:
-            1   2   3
+        $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Zones de distància que vol viatjar:       $RESET
+        $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT            1   2   3                      $RESET
             
         """.trimIndent())
 }
@@ -82,7 +81,7 @@ fun opcZones(): Int{
 
     do {
         zonesMenu()
-        println("Selecciona una zona: ")
+        print("$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Selecciona una zona:                      $RESET")
 
         // Verificar que l'entrada sigui un número
         if (scanner.hasNextInt()) {
@@ -92,14 +91,14 @@ fun opcZones(): Int{
 
             // Verificar si la opció es vàlida
             when(opcZona){
-                1 -> println("Has escollit $opcZona zona.")
-                2 -> println("Has escollit $opcZona zones.")
-                3 -> println("Has escollit $opcZona zones.")
-                else -> println("Opcions disponibles: 1, 2, 3")
+                1 -> println("$YELLOW_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has escollit $opcZona zona.                      $RESET")
+                2 -> println("$YELLOW_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has escollit $opcZona zones.                     $RESET")
+                3 -> println("$YELLOW_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Has escollit $opcZona zones.                     $RESET")
+                else -> println("$BLUE_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Opcions disponibles: 1, 2, 3              $RESET")
             }
 
         } else {
-            println("Error! Has de seleccionar una zona. Intenta-ho una altre vegada!.")
+            println("$RED_BACKGROUND_BRIGHT$WHITE_BOLD_BRIGHT Error! Intenta-ho una altre vegada!       $RESET")
             // Netejar el buffer del Scanner
             scanner.nextLine()
         }
@@ -112,7 +111,7 @@ fun quantitatTickets(): Int {
     var sortidaInt: Int
 
     do {
-        println("\nQuants bitllets vols comprar? ")
+        print("\n$WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Quants bitllets vols comprar?             $RESET")
 
         val tickets: String = ""
 
