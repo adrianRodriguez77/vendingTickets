@@ -4,6 +4,14 @@ import java.util.*
 
 const val errorMSG = "Introduce lo que se te pide, por favor."
 
+/**
+ * This method shows the main menu of the program
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample menuTickets
+ */
+
 fun menuTickets(){
     //Mostrar menú de tickets
     println(
@@ -18,6 +26,16 @@ fun menuTickets(){
         
     """.trimIndent())
 }
+
+/**
+ * This method offers the possibility of choosing a ticket to the user.
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample opcMenuTickets
+ * @return tipusBitllet
+ */
+
 fun opcMenuTickets(): String{
     var opcMenu = 0
     var tipusBitllet = ""
@@ -71,6 +89,15 @@ fun opcMenuTickets(): String{
 
     return tipusBitllet
 }
+
+/**
+ * This method shows the zones menu
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample zonesMenu
+ */
+
 fun zonesMenu(){
     println("""
         $WHITE_BACKGROUND_BRIGHT$BLUE_BOLD_BRIGHT Zones de distància que vol viatjar:       $RESET
@@ -78,6 +105,16 @@ fun zonesMenu(){
             
         """.trimIndent())
 }
+
+/**
+ * This method asks the user and calculates the areas of the bill
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample opcZones
+ * @return opcZona
+ */
+
 fun opcZones(): Int{
     var opcZona = 0
 
@@ -107,6 +144,16 @@ fun opcZones(): Int{
     } while (opcZona !in 1..3)
     return opcZona
 }
+
+/**
+ * This method reads the number of the amount of bills that the user wants
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample quantitatTickets
+ * @return sortidaInt
+ */
+
 fun quantitatTickets(): Int {
 
     val ticketList = mutableListOf(1, 2, 3)
@@ -128,6 +175,19 @@ fun quantitatTickets(): Int {
     } while (sortidaInt !in ticketList)
     return sortidaInt
 }
+
+/**
+ * This method calculates the price of the different tickets
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample preuTickets
+ * @param bitllet
+ * @param quantitat
+ * @return bitllet
+ */
+
+
 fun preuTickets(bitllet: String, zona: Int, quantitat: Int): Double {
     return when(bitllet){
         "Bitllet Senzill" -> {
@@ -175,6 +235,15 @@ fun preuTickets(bitllet: String, zona: Int, quantitat: Int): Double {
     }
 
 }
+
+/**
+ * This method shows the ticket with its respective price
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample mostrarTicket
+ */
+
 fun mostrarTicket(bitllet: String, zona: Int, quantitat: Int, preu: Double) {
     println("""
         _____________________________TICKET______________________________    
@@ -182,6 +251,14 @@ fun mostrarTicket(bitllet: String, zona: Int, quantitat: Int, preu: Double) {
         _________________________________________________________________
     """.trimIndent())
 }
+
+/**
+ * This method shows the set of all tickets
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample mostrarTicketTotal
+ */
 
 fun mostrarTicketTotal(detallCompra: List<String>, totalPreu: Double) {
     println("""
@@ -198,6 +275,15 @@ fun mostrarTicketTotal(detallCompra: List<String>, totalPreu: Double) {
     """.trimIndent())
 }
 
+/**
+ * This method creates the final ticket
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample demanarTickets
+ * @return Triple
+ */
+
 fun demanarTickets(): Triple<String, Int, Int> {
     val bitllet = opcMenuTickets()
     val zona = opcZones()
@@ -205,6 +291,16 @@ fun demanarTickets(): Triple<String, Int, Int> {
 
     return Triple(bitllet, zona, quantitat)
 }
+
+/**
+ * This method manages the payment of the ticket
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample gestionarPagament
+ * @return tipusBitllet
+ * @param totalPreu
+ */
 
 fun gestionarPagament(totalPreu: Double) {
     var dinersIntroduits = 0.0
@@ -235,14 +331,38 @@ fun gestionarPagament(totalPreu: Double) {
     }
 }
 
+/**
+ * This method gives the money change
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample mostrarCompraSatisfactoria
+ */
+
 fun mostrarCompraSatisfactoria(canvi: Double) {
     println("Compra satisfactòria. Torna: $canvi€")
 }
+
+/**
+ * This method shows an invalid coin
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample mostrarMonedaNoValida
+ */
 
 fun mostrarMonedaNoValida() {
     println("Moneda no vàlida. Introdueix una quantitat vàlida.")
     scanner.nextLine() // Netegem el buffer del scanner
 }
+
+/**
+ * This method shows an invalid input
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ * @sample mostrarEntradaNoValida
+ */
 
 fun mostrarEntradaNoValida() {
     println("Entrada no vàlida. Introdueix un nombre vàlid.")

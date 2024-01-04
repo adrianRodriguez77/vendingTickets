@@ -4,6 +4,13 @@ import java.util.Scanner
 
 var scanner = Scanner(System.`in`)
 
+/**
+ * This program can be used to buy different train cards using java.util.Scanner
+ * @author adrianRodriguez77
+ * @author oscarsxrrano
+ * @since 04/01/2024
+ */
+
 fun main() {
 
     var totalPreu = 0.0
@@ -19,6 +26,14 @@ fun main() {
 
         val detallCompra = "$quantitat $bitllet amb zona $zona    $preu€"
         detallsCompres.add(detallCompra)
+
+        when (bitllet) {
+            "Bitllet Senzill" -> asciiBitlletSenzill()
+            "TCasual" -> asciiTCasual()
+            "TUsual" -> asciiTUsual()
+            "TFamiliar" -> asciiTFamiliar()
+            "TJove" -> asciiTJove()
+        }
 
         mostrarTicket(bitllet, zona, quantitat, preu)
 
