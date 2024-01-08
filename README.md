@@ -1,4 +1,4 @@
-#Maquina de venda Project
+# Maquina de venda Project
 
 Aquest projecte tracta sobre la compra dels diferents bitllets de tren i el càlcul del seu preu.
 - adrianRodriguez77
